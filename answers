@@ -1,3 +1,22 @@
+ANS8:
+----------------
+code:
+#include <stdio.h> 
+//greatest of 3 integers
+int main() 
+{ 
+    int A, B, C, largest; 
+  
+    printf("Enter three numbers: "); 
+    scanf("%d %d %d", &A, &B, &C); 
+  
+    largest = A > B ? (A > C ? A : C) : (B > C ? B : C); 
+  
+    printf("%d is the largest number.", largest); 
+  
+    return 0; 
+} 
+---------------------------
 ANS 7:-----
 code:
 #include<stdio.h>
