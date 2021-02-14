@@ -1,4 +1,4 @@
-NOTE: Code mtlb command === actual program
+Programs
 -----------------------------------------
 ANS 1:
 code:
@@ -289,45 +289,38 @@ int main()
 Answer 2: Swap
 -----------------
 code: 
-//1st technique
+//1st technique (using temporary variable)
+
 #include <stdio.h>
-void swap(int *firstValue, int *secondValue) 
-{ 
-    int temp = *firstValue; 
-    *firstValue = *secondValue; 
-    *secondValue = temp; 
-} 
-  
 int main() 
 { 
     int x, y; 
+    int temp=0;
     printf("Enter Value of first number "); 
     scanf("%d", &x); 
-    printf("\nEnter Value of second number  "); 
+    printf("\nEnter Value of second number "); 
     scanf("%d", &y); 
-    swap(&x, &y); 
+    temp=x;
+    x=y;
+    y=temp;
     printf("\nAfter Swapping: firstNumber = %d, secondNumber = %d", x, y); 
     return 0; 
 } 
 
-//2nd technique
+//2nd technique(using airthmetic operation)
 
 #include <stdio.h>
-void swap(int *a, int *b) 
-{   //second technique for swapping
-    *a = *a + *b;
-    *b = *a - *b;
-    *a = *a - *b; 
-} 
-  
 int main() 
 { 
     int x, y; 
+    int temp=0;
     printf("Enter Value of first number "); 
     scanf("%d", &x); 
-    printf("\nEnter Value of second number  "); 
+    printf("\nEnter Value of second number "); 
     scanf("%d", &y); 
-    swap(&x, &y); 
+    x = x + y;
+    y = x - y;
+    x = x - y;
     printf("\nAfter Swapping: firstNumber = %d, secondNumber = %d", x, y); 
     return 0; 
 } 
