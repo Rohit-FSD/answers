@@ -16,6 +16,21 @@ int main()
   
     return 0; 
 } 
+
+//greatest of 4 integers
+#include<stdio.h> 
+#include<stdlib.h> 
+int main() 
+{  
+ int a,b,c,d,largest; 
+
+ printf("Enter the 4 numbers :\n "); 
+ scanf("%d %d %d %d",&a,&b,&c,&d); 
+
+ largest= (a>b)?(a>c)?(a>d)?a:d:(c>d)?c:d:(b>c)?(b>d)?b:d:(c>d)?c:d; 
+ printf("The largest number is %d",largest); 
+ return 0; 
+} 
 ---------------------------
 ANS 7:-----
 code:
