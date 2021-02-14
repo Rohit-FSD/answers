@@ -1,3 +1,52 @@
+ANS3:
+----------------
+code:
+/* C program to find roots of a quadratic equation */
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Prints roots of quadratic equation ax*2 + bx + x
+void findRoots(int a, int b, int c)
+{
+	// If a is 0, then equation is not quadratic, but
+	// linear
+	if (a == 0) {
+		printf("Invalid");
+		return;
+	}
+
+	int d = b * b - 4 * a * c;
+	double sqrt_val = sqrt(abs(d));
+
+	if (d > 0) {
+		printf("Roots are real and different \n");
+		printf("%f\n%f", (double)(-b + sqrt_val) / (2 * a),
+			(double)(-b - sqrt_val) / (2 * a));
+	}
+	else if (d == 0) {
+		printf("Roots are real and same \n");
+		printf("%f", -(double)b / (2 * a));
+	}
+	else // d < 0
+	{
+		printf("Roots are complex \n");
+		printf("%f + i%f\n%f - i%f", -(double)b / (2 * a),
+			sqrt_val, -(double)b / (2 * a), sqrt_val);
+	}
+}
+
+// Driver code
+int main()
+{
+    int a,b,c;
+	printf("\nEnter a, b, c to enter inside eq.:");
+	scanf("%d%d%d",&a,&b,&c);
+	findRoots(a, b, c);
+	return 0;
+}
+
+
 Answer 2: Swap
 -----------------
 code: 
@@ -41,5 +90,41 @@ int main()
     scanf("%d", &y); 
     swap(&x, &y); 
     printf("\nAfter Swapping: firstNumber = %d, secondNumber = %d", x, y); 
+    return 0; 
+} 
+
+
+ANS 4:
+-------------------
+code:
+#include<stdio.h>    
+// function to convert decimal to binary 
+void decToBinary(int n) 
+{ 
+    // array to store binary number 
+    int binaryNum[32]; 
+  
+    // counter for binary array 
+    int i = 0; 
+    while (n > 0) { 
+  
+        // storing remainder in binary array 
+        binaryNum[i] = n % 2; 
+        n = n / 2; 
+        i++; 
+    } 
+  
+    // printing binary array in reverse order 
+    for (int j = i - 1; j >= 0; j--) 
+        printf("%d",binaryNum[j]); 
+} 
+  
+// Driver program to test above function 
+int main() 
+{ 
+    int n;
+    printf("\n Enter Number :");
+    scanf("%d",&n);
+    decToBinary(n); 
     return 0; 
 } 
