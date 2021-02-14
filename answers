@@ -1,8 +1,32 @@
 NOTE: Code mtlb command
 -----------------------------------------
 
-
-ANS !!:
+ANS 12:
+code:
+#include <stdio.h>
+ 
+int main()
+{
+    int a,b,sum;
+    float avg,product;
+ 
+    printf("Enter first number :");
+    scanf("%d",&a);
+    printf("Enter second number :");
+    scanf("%d",&b);
+ 
+    sum=a+b;
+    avg= (float)(a+b)/2;
+    product=a*b;
+ 
+    printf("\nSum of %d and %d is = %d",a,b,sum);
+    printf("\nAverage of %d and %d is = %f",a,b,avg);
+    printf("\nProduct of %d and %d is = %f",a,b,product);
+ 
+    return 0;
+}
+----------------------------------------
+ANS 11:
 code:
 ---------
 // C program to check if a 
