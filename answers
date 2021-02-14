@@ -3,13 +3,11 @@ Programs
 ANS 1:
 code:
 #include <stdio.h>
- 
 int main()
 {
     int counter=0,grade,total=0;
     float average;
     
- 
     printf("Enter grade -5 to end :");
     scanf("%d",&grade);
     while(grade!=-5){
@@ -20,7 +18,12 @@ int main()
     }
     if(counter!=0){
         average=(float)total/counter;
-        printf("Class average is %.2f\n",average);
+        if(average>=70)
+	        printf("Class average is %.2f and Grade=A+ \n",average);
+	    if(average<70&&average>60)
+	        printf("Class average is %.2f and Grade=B+ \n",average);
+	    else
+	        printf("Class average is %.2f and Grade=c+ \n",average);     
     }
     else{
         printf("No grades entered\n");
